@@ -14,10 +14,16 @@ pnpm install
 pnpm-licenses generate-disclaimer --prod --output-file=../THIRDPARTY-frontend.yml
 popd
 
-if [[ "$target_platform" == linux* ]]
+# native extensions currently not available on other platforms
+# https://github.com/benfred/py-spy/issues/729, https://github.com/benfred/py-spy/pull/330
+if [[ "$target_platform" == linux-64 ]]
 then
     export RUSTFLAGS="-C link-arg=-Wl,-rpath-link,${PREFIX}/lib -L${PREFIX}/lib"
     cargo install --no-track --locked --features unwind --root "$PREFIX" --path .
+elif [[ "$target_platform" == linux* ]]
+then
+    export RUSTFLAGS="-C link-arg=-Wl,-rpath-link,${PREFIX}/lib -L${PREFIX}/lib"
+    cargo install --no-track --locked --root "$PREFIX" --path .
 else
     cargo install --no-track --locked --root "$PREFIX" --path .
 fi
