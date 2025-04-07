@@ -1,6 +1,6 @@
 context:
   name: py-crude-resource-monitor
-  version: "0.1.4"
+  version: "0.2.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/I-Al-Istannen/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: e8e3e5e16a8e86070b2740dea7918cb021e85e0e10f17d8ed1dc048d9f0e3787
+  sha256: c871c646abfd22078e36d1f515ebb1b4365c912a5d2bae8771c30f95c7a79b2b
   patches:
     - if: win
       then: 0001-pnpm-bat.patch
@@ -31,7 +31,7 @@ requirements:
 
 tests:
   - script:
-    - py-crude-resource-monitor --help
+      - py-crude-resource-monitor --help
 
 about:
   homepage: https://github.com/I-Al-Istannen/${{ name }}
