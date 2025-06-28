@@ -1,6 +1,6 @@
 context:
   name: py-crude-resource-monitor
-  version: "0.2.1"
+  version: "0.3.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/I-Al-Istannen/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 400ddf322de6de21008a6dce2fd7b02f517f58d58c0d328a865bf82740cc1944
+  sha256: 79597db6c8b020460814bd9b179d8a1625aba92f94021c8c9f01aea225598e87
   patches:
     - if: win
       then: 0001-pnpm-bat.patch
