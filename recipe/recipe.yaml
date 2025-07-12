@@ -14,7 +14,7 @@ source:
       then: 0001-pnpm-bat.patch
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
