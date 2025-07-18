@@ -17,7 +17,7 @@ pnpm-licenses generate-disclaimer ^
     --output-file=..\THIRDPARTY-frontend.yml ^
     && ^
 cd .. && ^
-cargo install --locked ^
+cargo auditable install --locked ^
     --root "%PREFIX%" ^
     --path . ^
     --no-track ^
