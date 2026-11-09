@@ -4,6 +4,8 @@ set -o xtrace -o nounset -o pipefail -o errexit
 
 export CARGO_PROFILE_RELEASE_STRIP=symbols
 export CARGO_PROFILE_RELEASE_LTO=fat
+# link against conda-forge's zstd instead of building the vendored C sources
+export ZSTD_SYS_USE_PKG_CONFIG=1
 
 cargo-bundle-licenses \
     --format yaml \

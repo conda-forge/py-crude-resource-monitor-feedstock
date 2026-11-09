@@ -25,10 +25,17 @@ requirements:
     - ${{ stdlib('c') }}
     - cargo-bundle-licenses
     - cargo-auditable
+    - if: unix
+      then:
+        - pkg-config
   host:
+    - if: unix
+      then:
+        - zstd
     - if: linux
       then:
         - libunwind
+        - liblzma-devel
 
 tests:
   - script:
