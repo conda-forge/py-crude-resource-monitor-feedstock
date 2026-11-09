@@ -1,0 +1,5 @@
+# sysinfo uses kIOMainPortDefault which requires macOS 12
+c_stdlib_version:  # [osx]
+  - "12.0"         # [osx]
+MACOSX_SDK_VERSION:  # [osx]
+  - "12.0"           # [osx]
