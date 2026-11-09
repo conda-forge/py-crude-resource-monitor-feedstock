@@ -27,7 +27,7 @@ requirements:
     - cargo-auditable
     - if: unix
       then:
-        - pkg-config
+        - pkgconf
   host:
     - if: unix
       then:
