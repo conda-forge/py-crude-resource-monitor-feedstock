@@ -23,4 +23,4 @@ rust_compiler:
 target_platform:
 - linux-ppc64le
 zstd:
-- '1.5'
+- '1.6'
